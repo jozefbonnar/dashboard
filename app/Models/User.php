@@ -259,4 +259,13 @@ class User extends Authenticatable implements MustVerifyEmail
         $status = str_replace(' ', '/', $status);
         return $status;
     }
+
+
+    //verify the users email address
+    public function verifyEmail()
+    {
+        $this->forceFill([
+            'email_verified_at' => now(),
+        ])->save();
+    }
 }
