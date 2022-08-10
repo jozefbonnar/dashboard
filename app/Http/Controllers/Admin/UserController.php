@@ -296,8 +296,8 @@ class UserController extends Controller
                 $suspendIcon = $user->isSuspended() ? "fa-play-circle" : "fa-pause-circle";
                 $suspendText = $user->isSuspended() ? __("Unsuspend") : __("Suspend");
                 return '
-                <a data-content="' . __("Login as User") . '" data-toggle="popover" data-trigger="hover" data-placement="top" href="' . route('admin.users.loginas', $user->id) . '" class="btn btn-sm btn-primary mr-1"><i class="fas fa-sign-in-alt"></i></a>
-                <a data-content="' . __("Verify") . '" data-toggle="popover" data-trigger="hover" data-placement="top" href="' . route('admin.users.verifyEmail', $user->id) . '" class="btn btn-sm btn-primary mr-1"><i class="fas fa-sign-in-alt"></i></a>
+                <a data-content="' . __("Login as User") . '" data-toggle="popover" data-trigger="hover" data-placement="top" href="' . route('admin.users.loginas', $user->id) . '" class="btn btn-sm btn-primary mr-1"><i class="fas fa-envelope-in-alt"></i></a>
+                <a data-content="' . __("Verify") . '" data-toggle="popover" data-trigger="hover" data-placement="top" href="' . route('admin.users.verifyEmail', $user->id) . '" class="btn btn-sm btn-info mr-1"><i class="fas "></i></a>
                 <a data-content="' . __("Show") . '" data-toggle="popover" data-trigger="hover" data-placement="top"  href="' . route('admin.users.show', $user->id) . '" class="btn btn-sm text-white btn-warning mr-1"><i class="fas fa-eye"></i></a>
                 <a data-content="' . __("Edit") . '" data-toggle="popover" data-trigger="hover" data-placement="top"  href="' . route('admin.users.edit', $user->id) . '" class="btn btn-sm btn-info mr-1"><i class="fas fa-pen"></i></a>
                <form class="d-inline" method="post" action="' . route('admin.users.togglesuspend', $user->id) . '">
